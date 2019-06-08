@@ -19,7 +19,8 @@ class App extends Component {
                 }
               }}
               width='100%'
-              height='90vh'
+              height='100vh'
+              style={{paddingBottom: 10, paddingTop: 10}}
             />
             </Col>
           </Row>
