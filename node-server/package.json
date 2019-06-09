@@ -1,0 +1,22 @@
+{
+  "name": "tvm-server",
+  "version": "1.0.0",
+  "description": "Node server for TheVeteranMarketplace website",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "TheVeteranMarketplace"
+  },
+  "keywords": [
+    "veterans",
+    "USA"
+  ],
+  "author": "Henry Foster",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
