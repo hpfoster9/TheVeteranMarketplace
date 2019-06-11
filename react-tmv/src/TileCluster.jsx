@@ -26,10 +26,10 @@ class TileCluster extends Component {
   	}
   	renderRow = (rowData, index) => {
   		return(
-  			<Row key={index}>
+  			<Row key={index} style={{paddingTop: '75px'}}>
   				{
   					rowData.map((tile, i)=>{
-  						return <Col key={i}><Tile key={i} href={tile[0]} text={tile[1]}/></Col>
+  						return <Col key={i}><Tile key={i} href={tile[0]} text={(this.props.loggedIn) ? tile[1] : "Log in to get discounts!"}/></Col>
   					})
   				}
   			</Row>
@@ -37,7 +37,7 @@ class TileCluster extends Component {
   	}
   	render = () => {
   		return(
-  			<Container>
+  			<Container fluid={true}>
   			{this.renderRows()}
   			</Container>
   		)

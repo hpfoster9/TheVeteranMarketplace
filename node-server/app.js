@@ -11,10 +11,8 @@ MongoClient.connect(url, function(err, db) {
   dbo = db.db("Team01DB");
 });
 
-
+app.listen(6969);
 app.use(cors())
-
-app.listen(3001);
 
 // create application/json parser
 var jsonParser = bodyParser.json()

@@ -1,0 +1,38 @@
+.imageWrapper{
+	max-width: 100%;
+    height: auto;
+}
+.img{
+	width: 100%;
+    height: auto;
+	position: relative; 
+	border-width: 3;
+	padding: 5;
+}
+.blur{
+	filter: blur(8px);
+}
+.hidden{
+	display: none;
+}
+.textOverlay{
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	word-wrap: normal;
+	width: 80%;
+}
+.discount{
+	text-align: center;
+	padding-top: 15px;
+	background-color: blue;
+	width: 75%;
+	height: auto;
+	padding: 5px;
+	border-radius: 10px;
+	color: white;
+}
+.login_signup:hover{
+  	text-decoration: underline;
+
+}
