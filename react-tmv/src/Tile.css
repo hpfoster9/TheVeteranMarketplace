@@ -4,29 +4,31 @@
 }
 .img{
 	width: 100%;
-    height: auto;
+  height: auto;
 	position: relative; 
 	border-width: 3;
 	padding: 5;
 }
 .blur{
-	filter: blur(8px);
+	filter: blur(4px) opacity(50%);
 }
 .hidden{
 	display: none;
 }
 .textOverlay{
 	position: absolute;
-	top: 10%;
+	top: 5%;
 	left: 10%;
-	word-wrap: normal;
-	width: 80%;
+  width: 80%;
+  font-size: 2vw;
 }
 .discount{
 	text-align: center;
 	padding-top: 15px;
 	background-color: blue;
-	width: 75%;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 5%;
 	height: auto;
 	padding: 5px;
 	border-radius: 10px;

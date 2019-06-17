@@ -24,7 +24,6 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 // POST /login gets urlencoded bodies
 app.post('/Login', jsonParser, function (req, res) {
-  console.log("LOGGING IN");
   dbo.collection("tvm-users").findOne({'email':req.body.email,'password':req.body.password}, function(err, result) {
   if (err){
   	res.send({'success': "error"})
@@ -46,7 +45,6 @@ app.get('/', function(req,res){
 
 // POST /signup gets urlencoded bodies
 app.post('/Signup', jsonParser, function (req, res) {
-  console.log("Signing up");
   dbo.collection("tvm-users").findOne({'email':req.body.email}, function(err, result) {
   	if (err){
 	  	res.send({'success': "error"})

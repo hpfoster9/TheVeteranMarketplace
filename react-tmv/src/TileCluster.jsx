@@ -6,7 +6,63 @@ class TileCluster extends Component {
 	constructor(props){
 	    super(props);
 	    this.state = {
-	    	tileTups: [["Czech it out1","Discount code: 1"],["Czech it out2","Discount code: 2"],["Czech it out3","Discount code: 3"],["Czech it out4","Discount code: 4"],["Czech it out5","Discount code: 5"],["Czech it out6","Discount code: 6"],["Czech it out7","Discount code: 7"],["Czech it out8","Discount code: 8"],["Czech it out9","Discount code: 9"]],
+	    	tileTups: [
+          {
+            name: "BRCC",
+            info: "BRCC info",
+            code: "code1",
+            src: "brcc.jpg"
+          },
+          {
+            name: "Cognitoys",
+            info: "Cognitoys info",
+            code: "code2",
+            src: "cognitoys.jpg"
+          },
+          {
+            name: "Combat Flip Flops",
+            info: "Combat Flip Flops info",
+            code: "code3",
+            src: "combat_flipflops.jpg"
+          },
+          {
+            name: "Counterstrike Coffee",
+            info: "Counterstrike coffee info",
+            code: "code4",
+            src: "counterstrike_coffee.png"
+          },
+          {
+            name: "Flags of Valor",
+            info: "Flags of Valor info",
+            code: "code5",
+            src: "fov.png"
+          },
+          {
+            name: "Frog Fuel",
+            info: "Frog fuel info",
+            code: "code6",
+            src: "frog_fuel.png"
+          },
+          {
+            name: "Nine Line",
+            info: "Nine Line info",
+            code: "code7",
+            src: "nine_line.jpg"
+          },
+          {
+            name: "Rumi Spice",
+            info: "Rumi Spice info",
+            code: "code8",
+            src: "rumi_spice.jpg"
+          },
+          {
+            name: "Turbo Pup",
+            info: "Turbo Pup info",
+            code: "code9",
+            src: "turbopup.jpg"
+          },
+
+        ],
 	    }
   	}
   	renderRows = () => {
@@ -29,7 +85,7 @@ class TileCluster extends Component {
   			<Row key={index} style={{paddingTop: '75px'}}>
   				{
   					rowData.map((tile, i)=>{
-  						return <Col key={i}><Tile key={i} href={tile[0]} text={(this.props.loggedIn) ? tile[1] : "Log in to get discounts!"}/></Col>
+  						return <Col key={i}><Tile key={i} name={tile.name} info={tile.info} src={tile.src} code={(this.props.loggedIn) ? tile.code : "Log in to get discounts!"}/></Col>
   					})
   				}
   			</Row>

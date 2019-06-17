@@ -49,7 +49,7 @@ class UserModal extends Component {
 	render = () => {
 		return(
 			<>	
-			<Button variant="outline-primary" size={"md"} onClick={this.toggleModal} style={{position: 'absolute', right: 15, top: 10, zIndex: 3}}>Log In</Button>
+			<Button variant="outline-primary" size={"md"} onClick={this.toggleModal} style={{position: 'absolute', right: 15, top: 10, zIndex: 3}}>{this.props.loggedIn ? "Logged In" : "Log In"}</Button>
 			<Modal show={this.state.modalOpen} onHide={this.toggleModal}>
 	          <Modal.Header closeButton>
 	            <Modal.Title>{this.state.typeTranslate[this.state.type]}</Modal.Title>

@@ -3,7 +3,7 @@ import ReactPlayer from 'react-player';
 import TileCluster from './TileCluster.jsx';
 import {Container, Row, Col } from 'react-bootstrap';
 import UserModal from './UserModal.jsx';
-
+import LandingPage from './LandingPage';
 
 class App extends Component {
   constructor(props){
@@ -14,7 +14,7 @@ class App extends Component {
     }
   }
   deleteAll(){
-    fetch(`http:/\/localhost:3001/Clear`,
+    fetch(`http://localhost:3001/Clear`,
     {
         headers: {
           'Accept': 'application/json',
@@ -55,7 +55,6 @@ class App extends Component {
         })
       }
       else{
-        console.log("Incorrect credentials");
         that.setState({
           loggedIn: false
         })
@@ -64,9 +63,11 @@ class App extends Component {
     })
   }
   render = () =>{
-     return (
+    return(<LandingPage/>);
+      /*
+      return (
        <div>
-        <UserModal open={this.state.modalOpen} handleSubmit={this.post}/>
+        <UserModal open={this.state.modalOpen} handleSubmit={this.post} loggedIn={this.state.loggedIn}/>
         <Container fluid={true}>
         <Row>
             <Col>
@@ -89,6 +90,7 @@ class App extends Component {
         </div>
       
     );
+    */
   }
 }
 
